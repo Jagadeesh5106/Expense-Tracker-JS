@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Expense Tracker</title>
-
-    </head>
-    <body>
-        <h1>Track your Expenses</h1>
-        <form id="expenseForm">
-            <label for="amount">Choose Expense Amount</label>
-            <input type="number" name="amount" id="amount"/>
-            <br>
-            <label for="description">Choose Description</label>
-            <input type="text" name="description" id="description"/>
-            <br>
-            <label for="type">Choose Type</label>
-            <select name="type" id="type">
-                <option value="Fuel">Fuel</option>
-                <option value="Movie">Movie</option>
-                <option value="Grocery">Grocery</option>
-                <option value="Bill">Bill</option>
-            </select>
-            <br>
-            <button type="submit" onclick="addExpenseHandler(event)">Add Expense</button>
-        </form>
-        <ul id="expenses">
-        </ul>
-        <script src="main.js"/>
-    </body>
-
+  <head>
+    <title>Expense Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+            <h1 class="text-white">Track your Expenses</h1>
+          </div>
+      </div>
+    </nav>
+    <div class="container">
+      <form id="expenseForm" class="form-inline ">
+        <label for="amount">Choose Expense Amount</label>
+        <input
+          type="number"
+          name="amount"
+          id="amount"
+          class="form-control mr-sm-2"
+        />
+        <br />
+        <label for="description">Choose Description</label>
+        <input
+          type="text"
+          name="description"
+          id="description"
+          class="form-control mr-sm-2"
+        />
+        <br />
+        <label for="type">Choose Type</label>
+        <select name="type" id="type" class="form-control mr-sm-2">
+          <option value="Fuel">Fuel</option>
+          <option value="Movie">Movie</option>
+          <option value="Grocery">Grocery</option>
+          <option value="Bill">Bill</option>
+        </select>
+        <br />
+        <button type="submit" onclick="addExpenseHandler(event)" class="bg-primary text-white">
+          Add Expense
+        </button>
+      </form>
+      <ul id="expenses" class="list-group"></ul>
+    </div>
+    <script src="main.js" />
+  </body>
 </html>

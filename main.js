@@ -12,6 +12,7 @@ function addExpenseHandler(e){
     }
 
     var expense =document.createElement("li");
+    expense.className="list-group-item"
     var text=expenseDetailsObj.description+"  -  "+expenseDetailsObj.type+"  -  "+expenseDetailsObj.amount;
     expense.appendChild(document.createTextNode(text));
 
